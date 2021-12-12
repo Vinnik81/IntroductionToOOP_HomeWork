@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <math.h>
 using namespace std;
 
@@ -38,14 +38,14 @@ public:
 	}
 	double distance(const Point& other)
 	{
-		return sqrt(pow(this->x - other.x, 2) + pow(this->y - other.y, 2)); //ìåòîä;
+		return sqrt(pow(this->x - other.x, 2) + pow(this->y - other.y, 2)); //Ð¼ÐµÑ‚Ð¾Ð´;
 	}
 	void print()
 	{
 		cout << "X = " << x << "\t" << "Y = " << y;
 	}
 };
-double distance(const Point& A, const Point& B) //ôóíêöèÿ;
+double distance(const Point& A, const Point& B) //Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ;
 {
 	double x_dist = A.get_x() - B.get_x();
 	double y_dist = A.get_y() - B.get_y();
@@ -56,16 +56,16 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	double x, y;
-	cout << "Ââåäèòå õ äëÿ òî÷êè À: "; cin >> x;
-	cout << "Ââåäèòå ó äëÿ òî÷êè À: "; cin >> y;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ… Ð´Ð»Ñ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð: "; cin >> x;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñƒ Ð´Ð»Ñ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð: "; cin >> y;
 	Point A(x, y);
-	cout << "Ââåäèòå õ äëÿ òî÷êè Â: "; cin >> x;
-	cout << "Ââåäèòå ó äëÿ òî÷êè Â: "; cin >> y;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ… Ð´Ð»Ñ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð’: "; cin >> x;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñƒ Ð´Ð»Ñ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð’: "; cin >> y;
 	Point B(x, y);
-	cout << "\n\n========================ÌÅÒÎÄ========================\n\n";
-	cout << "Ðàññòîÿíèå îò òî÷êè À äî òî÷êè Â: " << A.distance(B) << endl;
-	cout << "Ðàññòîÿíèå îò òî÷êè Â äî òî÷êè À: " << B.distance(A) << endl;
-	cout << "\n\n=======================ÔÓÍÊÖÈß=======================\n\n";
-	cout << "Ðàññòîÿíèå ìåæäó òî÷êàìè À è Â: " << distance(A, B) << endl;
-	cout << "Ðàññòîÿíèå ìåæäó òî÷êàìè B è A: " << distance(B, A) << endl;
+	cout << "\n\n========================ÐœÐ•Ð¢ÐžÐ”========================\n\n";
+	cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¾Ñ‚ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð Ð´Ð¾ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð’: " << A.distance(B) << endl;
+	cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¾Ñ‚ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð’ Ð´Ð¾ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð: " << B.distance(A) << endl;
+	cout << "\n\n=======================Ð¤Ð£ÐÐšÐ¦Ð˜Ð¯=======================\n\n";
+	cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ Ð Ð¸ Ð’: " << distance(A, B) << endl;
+	cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ B Ð¸ A: " << distance(B, A) << endl;
 }
